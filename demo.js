@@ -7,7 +7,8 @@ const {
   Client
 } = require('./');
 
-const client = new Client('APPKEY', 'APPSECRET');
+// const client = new Client('APPKEY', 'APPSECRET');
+const client = new Client('23967750', 'BZcz3VlqL1DVhWeF1boE');
 
 co(function* () {
   var url = 'https://open8200.hikvision.com/artemis/api/artemis/v1/minus';
@@ -28,6 +29,9 @@ co(function* () {
   });
 
   console.log(JSON.stringify(result));
+}).catch((error)=>{
+  //请求错误信息
+  console.log(JSON.stringify(error.message));
 });
 
 co(function* () {
@@ -46,112 +50,19 @@ co(function* () {
     //   'b-query2': 'query2Value'
     // },
     data: {
-      'a': '1',
-      'b': '1'
+      'a': 1,
+      'b': 1
     }
   });
 
   console.log(JSON.stringify(result));
+}).catch((error)=>{
+  //请求错误信息
+  console.log(JSON.stringify(error.message));
 });
 
 // co(function* () {
-//   var url = 'http://api.aaaa.com/poststring';
-
-//   var result = yield client.post(url, {
-//     headers: {
-//       accept: 'application/json',
-//       'content-type': Client.CONTENT_TYPE_TEXT
-//       //（可选）Body MD5,服务端会校验Body内容是否被篡改,建议Body非Form表单时添加此Header
-//       // headers.put(HttpHeader.HTTP_HEADER_CONTENT_MD5, MessageDigestUtil.base64AndMD5(body));
-//     },
-//     signHeaders: {
-//       'a-header1': 'header1Value',
-//       'b-header2': 'header2Value'
-//     },
-//     query: {
-//       'a-query1': 'query1Value',
-//       'b-query2': 'query2Value'
-//     },
-//     data: 'demo string body content'
-//   });
-
-//   console.log(JSON.stringify(result));
-// });
-
-// co(function* () {
-//   var url = 'http://api.aaaa.com/poststream';
-
-//   var result = yield client.post(url, {
-//     headers: {
-//       accept: 'application/json',
-//       'content-type': Client.CONTENT_TYPE_TEXT
-//       //（可选）Body MD5,服务端会校验Body内容是否被篡改,建议Body非Form表单时添加此Header
-//       // headers.put(HttpHeader.HTTP_HEADER_CONTENT_MD5, MessageDigestUtil.base64AndMD5(body));
-//     },
-//     signHeaders: {
-//       'a-header1': 'header1Value',
-//       'b-header2': 'header2Value'
-//     },
-//     query: {
-//       'a-query1': 'query1Value',
-//       'b-query2': 'query2Value'
-//     },
-//     data: Buffer.from('demo string body content', 'utf8')
-//   });
-
-//   console.log(JSON.stringify(result));
-// });
-
-// co(function* () {
-//   var url = 'http://api.aaaa.com/putstring';
-
-//   var result = yield client.post(url, {
-//     headers: {
-//       accept: 'application/json',
-//       'content-type': Client.CONTENT_TYPE_TEXT
-//       //（可选）Body MD5,服务端会校验Body内容是否被篡改,建议Body非Form表单时添加此Header
-//       // headers.put(HttpHeader.HTTP_HEADER_CONTENT_MD5, MessageDigestUtil.base64AndMD5(body));
-//     },
-//     signHeaders: {
-//       'a-header1': 'header1Value',
-//       'b-header2': 'header2Value'
-//     },
-//     query: {
-//       'a-query1': 'query1Value',
-//       'b-query2': 'query2Value'
-//     },
-//     data: 'demo string body content'
-//   });
-
-//   console.log(JSON.stringify(result));
-// });
-
-// co(function* () {
-//   var url = 'http://api.aaaa.com/putstream';
-
-//   var result = yield client.post(url, {
-//     headers: {
-//       accept: 'application/json',
-//       'content-type': Client.CONTENT_TYPE_TEXT
-//       //（可选）Body MD5,服务端会校验Body内容是否被篡改,建议Body非Form表单时添加此Header
-//       // headers.put(HttpHeader.HTTP_HEADER_CONTENT_MD5, MessageDigestUtil.base64AndMD5(body));
-//     },
-//     signHeaders: {
-//       'a-header1': 'header1Value',
-//       'b-header2': 'header2Value'
-//     },
-//     query: {
-//       'a-query1': 'query1Value',
-//       'b-query2': 'query2Value'
-//     },
-//     data: Buffer.from('demo string body content', 'utf8')
-//   });
-
-//   console.log(JSON.stringify(result));
-// });
-
-// co(function* () {
-//   var url = 'http://api.aaaa.com/delete';
+//   var url = 'https://open8200.hikvision.com/delete';
 
 //   var result = yield client.delete(url, {
 //     headers: {
@@ -172,7 +83,7 @@ co(function* () {
 
 
 // co(function* () {
-//   var url = 'http://api.equip.emailuo.com/equipment/manufacturer/update';
+//   var url = 'https://open8200.hikvision.com/update';
 
 //   var result = yield client.put(url, {
 //     headers: {
@@ -180,7 +91,7 @@ co(function* () {
 //       'content-type': 'application/x-www-form-urlencoded'
 //     },
 //     data: {
-//       gid: ''
+//       pid: ''
 //     }
 //   });
 

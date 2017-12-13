@@ -1,6 +1,6 @@
 {
-  "name": "hik-api-gateway-test",
-  "version": "1.0.0",
+  "name": "hik-api-gateway-demo",
+  "version": "1.0.1",
   "description": "hik-api-gateway node.js SDK",
   "main": "index.js",
   "directories": {
@@ -17,7 +17,8 @@
     "babel-runtime": "^6.23.0",
     "debug": "^2.6.0",
     "httpx": "^2.1.1",
-    "uuid": "^3.0.0"
+    "uuid": "^3.0.0",
+    "co": "^4.6.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -26,7 +27,6 @@
     "babel-register": "^6.24.1",
     "coveralls": "^2.13.1",
     "doxmate": "^0.3.1",
-    "eslint": "^3.11.1",
     "expect.js": "^0.3.1",
     "mocha": "^3.2.0",
     "nyc": "^11.0.2"
@@ -38,13 +38,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guilinmifen/hik-api-gateway-test.git"
+    "url": "git+https://github.com/weicheng6/hik-api-gateway-demo.git"
   },
   "keywords": [
-    "hik-api-gateway"
+    "hik-api-gateway",
+    "hik",
+    "api",
+    "gateway"
   ],
   "bugs": {
-    "url": "https://github.com/guilinmifen/hik-api-gateway-test/issues"
+    "url": "https://github.com/weicheng6/hik-api-gateway-demo/issues"
   },
-  "homepage": "https://github.com/guilinmifen/hik-api-gateway-test#readme"
+  "homepage": "https://github.com/weicheng6/hik-api-gateway-demo#readme"
 }
